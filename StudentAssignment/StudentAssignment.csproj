@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,11 +49,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollegeOfStudent.cs" />
+    <Compile Include="IntroDbContext.cs" />
+    <Compile Include="Migrations\201802221707280_Adding CollegeOfStudent and Name tables to SQL.cs" />
+    <Compile Include="Migrations\201802221707280_Adding CollegeOfStudent and Name tables to SQL.Designer.cs">
+      <DependentUpon>201802221707280_Adding CollegeOfStudent and Name tables to SQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802221709486_added max limit to major.cs" />
+    <Compile Include="Migrations\201802221709486_added max limit to major.Designer.cs">
+      <DependentUpon>201802221709486_added max limit to major.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802221723468_adding Foriegn Key to Nametable.cs" />
+    <Compile Include="Migrations\201802221723468_adding Foriegn Key to Nametable.Designer.cs">
+      <DependentUpon>201802221723468_adding Foriegn Key to Nametable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Name.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802221707280_Adding CollegeOfStudent and Name tables to SQL.resx">
+      <DependentUpon>201802221707280_Adding CollegeOfStudent and Name tables to SQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802221709486_added max limit to major.resx">
+      <DependentUpon>201802221709486_added max limit to major.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802221723468_adding Foriegn Key to Nametable.resx">
+      <DependentUpon>201802221723468_adding Foriegn Key to Nametable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
